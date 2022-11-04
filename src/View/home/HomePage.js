@@ -1,15 +1,14 @@
-import Header from "../../Componentes/Header";
-import Footer from "../../Componentes/Footer";
+import "./HomePage.css";
+import Navbar from '../../Componentes/Navbar/Navbar';
 
 function HomePage () {
 
     return (
         <div>
-            <Header/>
+            <Navbar/>
             <p>
-                hola mundo
+                hola mundo soy el home
             </p>
-            <Footer/>
         </div>
     )
 }
