@@ -8,7 +8,8 @@ function TableComponent() {
 
 const {mapUsers} = useAdmin ();
 
-    /*
+    /* COMENTO DESDE AQUI:
+
     const [users, setusers] = useState([])
 
     useEffect(() => {
@@ -29,7 +30,8 @@ const {mapUsers} = useAdmin ();
             <td>{item.date}</td>
         </tr>
     ));
-    */
+
+    */ // HASTA AQUI.
 
     return (
         <div>
