@@ -9,22 +9,22 @@ function NavbarComponent() {
     const handleShow = () => setShow(true);
 
     // useState Form:
-const [form, setForm] = useState ({});
+    const [form, setForm] = useState({});
 
 
-function onChangeInputs (e) {
-const {name, value}= e.target;
-const changes = {...form, [name]: value};
-setForm (changes);
-console.log (form);
-}
+    function onChangeInputs(e) {
+        const { name, value } = e.target;
+        const changes = { ...form, [name]: value };
+        setForm(changes);
+        console.log(form);
+    }
 
-function SaveLocalStorage () {
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-    let response = [...users, form];
-    localStorage.setItem("users", JSON.stringify(response));
-    console.log(response);
-}
+    function SaveLocalStorage() {
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        let response = [...users, form];
+        localStorage.setItem("users", JSON.stringify(response));
+        console.log(response);
+    }
 
     return (
         <div>
@@ -35,8 +35,7 @@ function SaveLocalStorage () {
                     <Navbar.Toggle />
                     <Navbar.Collapse>
                         <Nav>
-                            <Nav.Link href="#action1">Inicio</Nav.Link>
-                            <Nav.Link href="#action2">Link</Nav.Link>
+                            <Nav.Link href="/">Inicio</Nav.Link>
                             <Nav.Link href="#action3">Link</Nav.Link>
                         </Nav>
                         <Form className="d-flex">
@@ -56,28 +55,28 @@ function SaveLocalStorage () {
                     <Form>
                         <Form.Group className="mb-3">
                             <Form.Label>Email</Form.Label>
-                            <Form.Control name="email" onChange={onChangeInputs} type="email"/>
+                            <Form.Control name="email" onChange={onChangeInputs} type="email" />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
                             <Form.Label>Nombre</Form.Label>
-                            <Form.Control name="name" onChange={onChangeInputs} type="text"/>
+                            <Form.Control name="name" onChange={onChangeInputs} type="text" />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
                             <Form.Label>Apellido</Form.Label>
-                            <Form.Control name="lastname" onChange={onChangeInputs} type="text"/>
+                            <Form.Control name="lastname" onChange={onChangeInputs} type="text" />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
                             <Form.Label>Fecha de Nacimiento</Form.Label>
-                            <Form.Control name="date" onChange={onChangeInputs} type="date"/>
+                            <Form.Control name="date" onChange={onChangeInputs} type="date" />
                         </Form.Group>
                     </Form>
 
                 </Modal.Body>
                 <Modal.Footer>
-                    
+
                     <Button variant="btn btn-primary w-100" onClick={SaveLocalStorage}>
                         Guardar Contacto
                     </Button>

@@ -3,6 +3,7 @@ import { Button, Pagination, Spinner } from "react-bootstrap";
 import CardComponent from "../../Componentes/Card/CardComponent";
 import { useState, useEffect } from "react";
 import useFilm from "../../utils/useFilm";
+import Navbar from '../../Componentes/Navbar/Navbar'
 
 
 function FilmPage() {
@@ -35,6 +36,9 @@ function FilmPage() {
 
     return (
         <div>
+            
+            <Navbar />
+            
             <div className="d-flex justify-content-center pt-5">
                 <div className="w-50 d-flex">
                     <input
