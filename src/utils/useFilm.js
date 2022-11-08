@@ -16,8 +16,12 @@ function useFilm () {
 
     async function GetMethod () {
         let {data} = await axios.get (`http://www.omdbapi.com/?s=${input}&page=${page}&apikey=d8dce04f`)
+        if (data.Search != undefined) {
         setmovie (data.Search);
+    } else {
+        alert ("No se encuentra tu Titulo");
     }
+}
 
 
     function OnChangeInput (e) {
@@ -33,13 +37,13 @@ function useFilm () {
 
 
     function SearchMovie () {
-        GetMethod ();
-        console.log (movie);
-        //setinput ("");
         if (input == "") {
-            setdisabled (true)
+            alert ("El input esta vacio !!")
+            setdisabled (true);
         } else {
-            setdisabled (false)
+            setdisabled (false);
+            GetMethod ();
+            console.log (movie);
         }
     }
 

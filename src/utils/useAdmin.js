@@ -20,6 +20,7 @@ function useAdmin () {
             <td>{item.name}</td>
             <td>{item.lastname}</td>
             <td>{item.date}</td>
+            <td>{item.admin}</td>
         </tr>
     ));
 

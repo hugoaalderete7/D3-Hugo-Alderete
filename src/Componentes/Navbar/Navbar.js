@@ -16,16 +16,20 @@ function NavbarComponent() {
 
     function onChangeInputs(e) {
         const { name, value } = e.target;
-        const changes = { ...form, [name]: value };
+        const changes = { ...form, [name]: value, admin: "false" };
         setForm(changes);
         console.log(form);
     }
 
     function SaveLocalStorage() {
         let users = JSON.parse(localStorage.getItem("users")) || [];
+        if (form.email != "" && form.name != "" && form.lastname != "" && form.date != "") {
         let response = [...users, form];
         localStorage.setItem("users", JSON.stringify(response));
         console.log(response);
+        } else {
+
+        }
     }
 
     return (
@@ -38,7 +42,6 @@ function NavbarComponent() {
                     <Navbar.Collapse>
                         <Nav>
                             <Nav.Link className='text-primary px-3' href="/"><b>Inicio</b></Nav.Link>
-                            <Nav.Link className='text-primary px-3' href="#action3"><b>Link</b></Nav.Link>
                         </Nav>
                         <Form className="d-flex">
                             <Nav.Link className='text-primary px-3' onClick={handleShow}><b>Crear Contacto</b></Nav.Link>

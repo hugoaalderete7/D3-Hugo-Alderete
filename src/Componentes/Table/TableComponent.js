@@ -43,6 +43,7 @@ const {mapUsers} = useAdmin ();
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Fecha de Nac.</th>
+                        <th>Admin</th>
                     </tr>
                 </thead>
                 <tbody>

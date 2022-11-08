@@ -46,12 +46,13 @@ function ModalLoginComponent() {
 
     function SesionPage () {
     
-        if (response != undefined) {
+        if (response != undefined & response.admin != "true") {
             window.location.href="/film";
+        } else if (response != undefined & response.admin == "true"){
+            window.location.href="/admin";
         } else {
-            alert ("Error en inicio de sesion")
+        alert ("Error en inicio de sesion")
         }
-    
     }
    // Login - Hasta aqui.
 
