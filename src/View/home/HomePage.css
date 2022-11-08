@@ -5,27 +5,18 @@
 }
 
 
-body {
-    background-color: blue;
-}
-
-
 .Padre {
+    position: relative;
     height: 100vh;
-    background-color:black;
+    background-color: black;
     width: 100%;
-}
-
-
-.Login {
-    position: absolute;
-    margin-left: 5%;
-    margin-top: 26%;
 }
 
 
 .Imagen {
     position: absolute;
+    /*background-color: brown;*/
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -40,37 +31,141 @@ body {
     position: absolute;
     width: 25%;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 
 .Titulo {
     color:white;
+    font-size: 2vw;
 }
 
 
 .Descripcion {
     color:white;
     margin-top: 3vh;
+    font-size: 1.2vw;
 }
 
-@media (max-width: 912px) {
+
+.Login {
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 27%;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    
+    .Padre {
+        /*background-color: red;*/
+    }
+    
+    
+    .Imagen {
+        position:relative;
+        
+    }
+
+    .imagenEnSeccion{
+        margin-top: 2vw;
+        width: 100%;
+    }
+    
+    .Titulo-Descripcion {
+        position:relative;
+        width: 100%;
+        /*background-color: blue;*/
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    
+    
+    .Titulo {
+        font-size: 5vw;
+        text-align: center;
+        padding: 0vw;
+        /*background-color: black;*/
+    }
+    
+    
+    .Descripcion {
+        font-size: 4vw;
+        text-align: center;
+        padding: 0vw  5vw  0vw  5vw;
+        margin-top: 0vh;
+
+    }
+
     
     .Login {
-        margin-top: 120%;
-    }
-    .Imagen {
+        position: relative;
         display: flex;
         justify-content: center;
-    }
-    .Titulo-Descripcion {
-        width: 100%;
-        margin-top: 60%;
-        padding: 5%;
-    }
-    
-    
-
+        margin-left: 0%;
+        margin-top: 0vw;
+}
 }
 
 
+
+
+
+
+
+
+@media (max-width: 912px) {
+    .Padre {
+        /*background-color: red;*/
+    }
+    
+    
+    .Imagen {
+        position:relative;
+        
+    }
+
+    .imagenEnSeccion{
+        width: 100%;
+    }
+    
+    .Titulo-Descripcion {
+        position:relative;
+        width: 100%;
+        /*background-color: blue;*/
+        margin-left: 0%;
+        margin-top: 5%;
+    }
+    
+    
+    .Titulo {
+        font-size: 4vw;
+        text-align: center;
+        padding: 5vw;
+        /*background-color: black;*/
+    }
+    
+    
+    .Descripcion {
+        font-size: 3vw;
+        text-align: center;
+        padding: 0vw  5vw  0vw  5vw;
+        margin-top: 0vh;
+
+    }
+
+    
+    .Login {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-left: 0%;
+        margin-top: 7vw;
+}
+
+}

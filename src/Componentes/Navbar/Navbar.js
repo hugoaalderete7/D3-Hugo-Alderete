@@ -31,17 +31,17 @@ function NavbarComponent() {
     return (
         <div>
             {/* Navbar */}
-            <Navbar className='Navbar' expand="lg">
+            <Navbar className='Navbar' expand="md">
                 <Container fluid>
-                    <Navbar.Brand className='text-primary' href="#">Desafio 3</Navbar.Brand>
-                    <Navbar.Toggle />
+                    <Navbar.Brand className='text-primary' href="#"><h4>Desafio 3</h4></Navbar.Brand>
+                    <Navbar.Toggle className='bg-secondary' />
                     <Navbar.Collapse>
                         <Nav>
-                            <Nav.Link className='text-primary px-3' href="/">Inicio</Nav.Link>
-                            <Nav.Link className='text-primary px-3' href="#action3">Link</Nav.Link>
+                            <Nav.Link className='text-primary px-3' href="/"><b>Inicio</b></Nav.Link>
+                            <Nav.Link className='text-primary px-3' href="#action3"><b>Link</b></Nav.Link>
                         </Nav>
                         <Form className="d-flex">
-                            <Nav.Link className='text-primary px-3' onClick={handleShow}>Crear Contacto</Nav.Link>
+                            <Nav.Link className='text-primary px-3' onClick={handleShow}><b>Crear Contacto</b></Nav.Link>
                         </Form>
                     </Navbar.Collapse>
                 </Container>

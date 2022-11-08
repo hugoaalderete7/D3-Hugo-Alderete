@@ -1,5 +1,6 @@
 import { Modal, Button, Form } from "react-bootstrap";
 import React, { useState, useEffect } from 'react';
+import "./ModalLoginComponent.css";
 
 function ModalLoginComponent() {
 
@@ -57,8 +58,8 @@ function ModalLoginComponent() {
 
     return (
         <div>
-            <Button variant="outline-primary" onClick={handleShowLogin}>
-                Iniciar Sesion
+            <Button variant="outline-primary" className="px-5" onClick={handleShowLogin}>
+                <b>Iniciar Sesion</b>
             </Button>
 
             <Modal show={showLogin} onHide={handleCloseLogin}>
@@ -82,7 +83,7 @@ function ModalLoginComponent() {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="primary" onClick={SesionPage}>
+                    <Button variant="primary" className="boton" onClick={SesionPage}>
                         Iniciar Sesion
                     </Button>
                 </Modal.Footer>
