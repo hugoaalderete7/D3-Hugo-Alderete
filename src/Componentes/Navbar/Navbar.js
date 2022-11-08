@@ -1,5 +1,7 @@
 import { Button, Container, Form, Nav, Navbar, NavDropdown, Modal } from 'react-bootstrap';
 import React, { useState } from 'react';
+import "./Navbar.css"
+
 
 function NavbarComponent() {
     // useState Modal:
@@ -29,17 +31,17 @@ function NavbarComponent() {
     return (
         <div>
             {/* Navbar */}
-            <Navbar bg="light" expand="lg">
+            <Navbar className='Navbar' expand="lg">
                 <Container fluid>
-                    <Navbar.Brand href="#">Desafio 3</Navbar.Brand>
+                    <Navbar.Brand className='text-primary' href="#">Desafio 3</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse>
                         <Nav>
-                            <Nav.Link href="/">Inicio</Nav.Link>
-                            <Nav.Link href="#action3">Link</Nav.Link>
+                            <Nav.Link className='text-primary px-3' href="/">Inicio</Nav.Link>
+                            <Nav.Link className='text-primary px-3' href="#action3">Link</Nav.Link>
                         </Nav>
                         <Form className="d-flex">
-                            <Button variant="outline-success" onClick={handleShow}>Crear Contacto</Button>
+                            <Nav.Link className='text-primary px-3' onClick={handleShow}>Crear Contacto</Nav.Link>
                         </Form>
                     </Navbar.Collapse>
                 </Container>

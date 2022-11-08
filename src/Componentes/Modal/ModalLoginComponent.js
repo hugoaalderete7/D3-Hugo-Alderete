@@ -57,7 +57,7 @@ function ModalLoginComponent() {
 
     return (
         <div>
-            <Button variant="primary" onClick={handleShowLogin}>
+            <Button variant="outline-primary" onClick={handleShowLogin}>
                 Iniciar Sesion
             </Button>
 

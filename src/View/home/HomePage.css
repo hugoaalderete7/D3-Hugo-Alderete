@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: blue;
+}
+
+
+.Padre {
+    height: 100vh;
+    background-color:black;
+    width: 100%;
+}
+
+
+.Login {
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 26%;
+}
+
+
+.Imagen {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+
+.imagenEnSeccion{
+    width: 80%;
+}
+
+
+.Titulo-Descripcion {
+    position: absolute;
+    width: 25%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+.Titulo {
+    color:white;
+}
+
+
+.Descripcion {
+    color:white;
+    margin-top: 3vh;
+}
+
+@media (max-width: 912px) {
+    
+    .Login {
+        margin-top: 120%;
+    }
+    .Imagen {
+        display: flex;
+        justify-content: center;
+    }
+    .Titulo-Descripcion {
+        width: 100%;
+        margin-top: 60%;
+        padding: 5%;
+    }
+    
+    
+
+}
+
+
