@@ -26,6 +26,7 @@ function NavbarComponent() {
         if (form.email != "" && form.name != "" && form.lastname != "" && form.date != "") {
         let response = [...users, form];
         localStorage.setItem("users", JSON.stringify(response));
+        handleClose ();
         console.log(response);
         } else {
 
